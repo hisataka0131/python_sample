@@ -3,6 +3,7 @@ from len import len_command
 from pybot_eto import eto_command
 from pybot_random import choice_command, dice_command
 from pybot_datetime import today_command, now_command, weekday_command
+from pybot_weather import weather_command
 
 #会話bot
 
@@ -50,6 +51,9 @@ while True:
 
         if '曜日' in command:
             response = weekday_command(command)
+        
+        if '天気' in command:
+            response = weather_command()
 
         if not response:
             response = '何言ってるかワカラナイ'
